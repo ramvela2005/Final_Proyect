@@ -1,27 +1,24 @@
-receta_id | nombre           | descripción                      | dificultad | tiempo_preparación | alergenos                 
-1         | Ensalada César   | Clásica ensalada con aderezo César | fácil      | 15 minutos         | gluten, lácteos           
-2         | Tacos de Pollo  | Tacos de pollo con salsa verde   | intermedio | 30 minutos         | gluten                    
-3         | Sopa de Tomate   | Sopa de tomate casera            | fácil      | 25 minutos         | lactosa, nueces           
-4         | Risotto de Champiñones | Risotto cremoso con champiñones | intermedio | 40 minutos         | gluten, lácteos           
-5         | Salmón al Horno  | Salmón al horno con limón y hierbas | fácil    | 25 minutos         | nueces, lácteos           
-6         | Pizza Margarita  | Clásica pizza con tomate y mozzarella | fácil      | 30 minutos         | gluten, lácteos           
-7         | Enchiladas Verdes | Enchiladas con salsa verde       | intermedio | 45 minutos         | gluten, lactosa           
-8         | Pastel de Zanahoria | Pastel de zanahoria con crema de queso | avanzado | 60 minutos     | nueces, lactosa, gluten   
-9         | Gazpacho         | Sopa fría de tomate y verduras   | fácil      | 20 minutos         | nueces, lactosa           
-10        | Filete de Ternera | Filete de ternera con salsa de vino tinto | intermedio | 35 minutos    | gluten, lactosa           
-11        | Sushi de Salmón  | Sushi roll de salmón fresco      | avanzado   | 50 minutos         | mariscos, lactosa, gluten 
-12        | Paella           | Paella española con mariscos     | avanzado   | 75 minutos         | mariscos, gluten          
-13        | Tarta de Manzana | Tarta clásica de manzana         | intermedio | 55 minutos         | nueces, lactosa, gluten   
-14        | Pasta Alfredo    | Pasta con salsa Alfredo cremosa  | fácil      | 20 minutos         | lactosa                   
-15        | Sopa de Lentejas | Sopa de lentejas con verduras    | fácil      | 30 minutos         | gluten                    
-16        | Burritos         | Burritos con carne y frijoles    | intermedio | 40 minutos         | gluten, lactosa           
-17        | Tortilla Española | Tortilla de patatas española   | fácil      | 25 minutos         | gluten                    
-18        | Ensalada de Quinoa | Ensalada saludable de quinoa   | fácil      | 20 minutos         | nueces                    
-19        | Estofado de Pollo | Estofado casero de pollo        | intermedio | 50 minutos         | gluten, lactosa           
-20        | Lasaña           | Lasaña clásica con carne y queso | avanzado | 60 minutos         | gluten, lactosa           
-21        | Pad Thai         | Clásico Pad Thai con camarones   | avanzado   | 45 minutos         | mariscos, gluten          
-22        | Sopa de Mariscos | Sopa de mariscos con tomate      | avanzado   | 55 minutos         | mariscos, lactosa         
-23        | Pollo a la Parrilla | Pollo a la parrilla con vegetales | fácil    | 35 minutos         | gluten                    
-24        | Hamburguesa      | Hamburguesa clásica con queso    | fácil      | 30 minutos         | gluten, lactosa           
-25        | Tiramisú         | Tiramisú clásico italiano        | avanzado   | 40 minutos         | lactosa                   
+receta_id | nombre           | descripción                      | dificultad | tiempo_preparación | alergenos           | categoria
+1         | Omelette         | Omelette con jamón y queso       | Fácil      | 10 minutos         | lactosa, huevos     | desayuno
+2         | Ensalada         | Ensalada de pollo                | Fácil      | 15 minutos         | nueces              | almuerzo
+3         | Spaghetti        | Spaghetti a la carbonara         | Intermedio | 20 minutos         | gluten, lactosa     | cena
+4         | Tacos            | Tacos de carne con guacamole     | Fácil      | 25 minutos         | gluten              | almuerzo
+5         | Pancakes         | Pancakes con miel y frutas       | Intermedio | 30 minutos         | gluten, lactosa, huevos | desayuno
+6         | Sopa             | Sopa de vegetales                | Fácil      | 40 minutos         | ninguno             | cena
+7         | Sandwich         | Sandwich de pavo y queso         | Fácil      | 10 minutos         | gluten, lactosa     | almuerzo
+8         | Pizza            | Pizza margarita                  | Avanzado   | 60 minutos         | gluten, lactosa     | cena
+9         | Smoothie         | Smoothie de frutas y yogurt      | Fácil      | 5 minutos          | lactosa             | desayuno
+10        | Arroz Frito      | Arroz frito con pollo y vegetales| Intermedio | 20 minutos         | ninguno             | cena
+11        | Burrito          | Burrito de frijoles              | Fácil      | 15 minutos         | gluten              | almuerzo
+12        | Quiche           | Quiche de espinacas y queso      | Avanzado   | 50 minutos         | gluten, lactosa, huevos | cena
+13        | Tostadas         | Tostadas con aguacate y huevo    | Fácil      | 10 minutos         | gluten, huevos      | desayuno
+14        | Pollo Asado      | Pollo asado con vegetales        | Intermedio | 45 minutos         | ninguno             | almuerzo
+15        | Galletas         | Galletas de chocolate            | Fácil      | 30 minutos         | gluten, lactosa, huevos | cena
+16        | Enchiladas       | Enchiladas de pollo              | Intermedio | 35 minutos         | gluten              | almuerzo
+17        | Crepas           | Crepas con Nutella               | Avanzado   | 25 minutos         | gluten, lactosa, huevos | desayuno
+18        | Risotto          | Risotto de champiñones           | Avanzado   | 40 minutos         | gluten, lactosa     | cena
+19        | Hamburguesa      | Hamburguesa clásica              | Fácil      | 20 minutos         | gluten, lactosa     | almuerzo
+20        | Lasagna          | Lasagna de carne                 | Avanzado   | 60 minutos         | gluten, lactosa     | cena
+25        | Chili con Carne  | Chili con carne                  | Intermedio | 50 minutos         | ninguno             | cena
+                  
 
