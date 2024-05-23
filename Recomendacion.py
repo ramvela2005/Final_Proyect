@@ -24,3 +24,28 @@ def main():
                 if neighbor_receta_id not in recommended_recetas:
                     recommended_recetas.append(neighbor_receta_id)
         return recommended_recetas
+
+    # Funciones para las opciones del menú
+    def mostrar_recomendaciones_generales(user_id):
+        print("Recomendaciones generales para el usuario {}:".format(user_id))
+        recommended_recetas = recommend_recetas(user_id)
+        for receta_id in recommended_recetas:
+            print("- Receta ID {}: {}".format(receta_id, G.nodes[receta_id]['name']))
+
+    def mostrar_desayuno(user_id):
+        print("Opciones de desayuno para el usuario {}:".format(user_id))
+        # Implementa la lógica para mostrar opciones de desayuno
+
+    def mostrar_almuerzo(user_id):
+        print("Opciones de almuerzo para el usuario {}:".format(user_id))
+        # Implementa la lógica para mostrar opciones de almuerzo
+
+    def mostrar_cena(user_id):
+        print("Opciones de cena para el usuario {}:".format(user_id))
+        # Implementa la lógica para mostrar opciones de cena
+
+    def editar_informacion(user_id):
+        print("Editar información para el usuario {}:".format(user_id))
+        # Implementa la lógica para editar información del usuario
+
+    
