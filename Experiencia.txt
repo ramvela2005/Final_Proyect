@@ -1,0 +1,4 @@
+experiencia_cocina_id | nivel    
+1                      | fácil    
+2                      | intermedio 
+3                      | avanzado 

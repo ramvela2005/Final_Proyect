@@ -1,0 +1,27 @@
+ingrediente_id | nombre        | tipo         
+1              | Pollo         | carne        
+2              | Zanahorias    | vegetal      
+3              | Papa          | vegetal      
+4              | Lechuga       | vegetal      
+5              | Tomate        | vegetal      
+6              | Champiñones   | vegetal      
+7              | Salmón        | pescado      
+8              | Mozzarella    | lácteo       
+9              | Limón         | fruta        
+10             | Harina        | carbohidrato 
+11             | Arroz         | carbohidrato 
+12             | Cebolla       | vegetal      
+13             | Queso         | lácteo       
+14             | Frijoles      | legumbre     
+15             | Tortillas     | carbohidrato 
+16             | Huevos        | lácteo       
+17             | Manzana       | fruta        
+18             | Lentejas      | legumbre     
+19             | Camarones     | mariscos     
+20             | Caldo de pollo| condimento   
+21             | Pasta         | carbohidrato 
+22             | Quinoa        | carbohidrato 
+23             | Canela        | condimento   
+24             | Nuez          | fruto seco   
+25             | Crema         | lácteo       
+

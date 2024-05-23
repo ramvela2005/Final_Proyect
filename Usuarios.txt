@@ -1,0 +1,22 @@
+Tipo de Usuario | user_id | nombre   | apellido | correo               | experiencia_cocina_id | alimentos_favoritos                  | alergias                | usuario  | contraseña
+Usuario          | 1       | Juan     | Pérez    | juan@example.com     | 2                     | papas, pollo, zanahorias, cebolla   | gluten, lactosa         | juan123  | passjuan123
+Usuario          | 2       | María    | García   | maria@example.com    | 1                     | carne, pescado, cebolla, tomate      | mariscos, nueces        | maria321 | marypass
+Usuario          | 3       | Carlos   | López    | carlos@example.com   | 3                     | huevos, leche, tomate, carne         | mariscos, gluten, lactosa| carlitos | 123carlos
+Usuario          | 4       | Ana      | Rodríguez| ana@example.com      | 1                     | pollo, pescado, zanahorias, cebolla  | gluten, nueces          | ana456   | passwordana
+Usuario          | 5       | Pedro    | Martínez | pedro@example.com    | 2                     | papas, carne, cebolla, tomate        | mariscos                | pedro789 | passpedro789
+Usuario          | 6       | Laura    | Díaz     | laura@example.com    | 3                     | leche, huevos, pollo, pescado        | gluten, lactosa, nueces | lauris   | lauralaura
+Usuario 	 | 7       | Manuel   | Sánchez  | manuel@example.com   | 1                     | zanahorias, pollo, cebolla, tomate   | mariscos, lactosa       | manu123  | passmanu123
+Usuario    	 | 8       | Sofia    | González | sofia@example.com    | 2                     | carne, pescado, cebolla, zanahorias  | gluten, nueces          | sofi456  | sofiapass
+Usuario    	 | 9       | Lucas    | Torres   | lucas@example.com    | 3                     | huevos, leche, carne, pescado        | mariscos, gluten        | luke     | lucas123
+Usuario		 | 10      | Valentina| Pérez    | valentina@example.com| 1                     | papas, pollo, zanahorias, cebolla   | mariscos, lactosa       | vale345  | valpass
+Usuario     	 | 11      | Santiago | López    | santiago@example.com | 2                     | carne, pescado, cebolla, tomate      | gluten, nueces          | santi    | 456santi
+Usuario   	 | 12      | Emma     | Fernández| emma@example.com     | 3                     | leche, huevos, pollo, pescado        | mariscos, gluten, lactosa| emmita   | pass123
+Usuario    	 | 13      | Martín   | Ruiz     | martin@example.com   | 1                     | zanahorias, pollo, cebolla, tomate   | nueces                  | martin456| martipass
+Usuario   	 | 14      | Julia    | Martínez | julia@example.com    | 2                     | carne, pescado, cebolla, zanahorias  | mariscos, lactosa       | julia89  | julypass
+Usuario   	 | 15      | Daniel   | García   | daniel@example.com   | 3                     | huevos, leche, carne, pescado        | gluten                  | dani123  | danielpass
+Usuario   	 | 16      | Camila   | Sánchez  | camila@example.com   | 1                     | papas, pollo, zanahorias, cebolla   | mariscos, lactosa, nueces| cami89   | camipass
+Usuario    	 | 17      | Alejandro| López    | alejandro@example.com| 2                     | carne, pescado, cebolla, tomate      | gluten, lactosa         | alej123  | alepass
+Usuario Admin    | 18      | Natalia  | Díaz     | natalia@example.com  | 3                     | leche, huevos, pollo, pescado        | mariscos, gluten        | natydiaz | nataliapass
+Usuario Admin    | 19      | Lucas    | Sánchez  | lucas@example.com    | 1                     | zanahorias, pollo, cebolla, tomate   | nueces                  | lucas345 | lucaspass
+Usuario Admin    | 20      | Diego    | Ramirez | Diego@example.com    | 2                     | carne, pescado, cebolla, zanahorias  | mariscos, lactosa       | Ram12  | 123
+   
