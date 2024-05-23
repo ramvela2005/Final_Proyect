@@ -16,7 +16,7 @@ Usuario   	 | 14      | Julia    | Martínez | julia@example.com    | 2         
 Usuario   	 | 15      | Daniel   | García   | daniel@example.com   | 3                     | huevos, leche, carne, pescado        | gluten                  | dani123  | danielpass
 Usuario   	 | 16      | Camila   | Sánchez  | camila@example.com   | 1                     | papas, pollo, zanahorias, cebolla   | mariscos, lactosa, nueces| cami89   | camipass
 Usuario    	 | 17      | Alejandro| López    | alejandro@example.com| 2                     | carne, pescado, cebolla, tomate      | gluten, lactosa         | alej123  | alepass
-Usuario Admin    | 18      | Natalia  | Díaz     | natalia@example.com  | 3                     | leche, huevos, pollo, pescado        | mariscos, gluten        | natydiaz | nataliapass
-Usuario Admin    | 19      | Lucas    | Sánchez  | lucas@example.com    | 1                     | zanahorias, pollo, cebolla, tomate   | nueces                  | lucas345 | lucaspass
-Usuario Admin    | 20      | Diego    | Ramirez | Diego@example.com    | 2                     | carne, pescado, cebolla, zanahorias  | mariscos, lactosa       | Ram12  | 123
+Admin		 | 18      | Natalia  | Díaz     | natalia@example.com  | 3                     | leche, huevos, pollo, pescado        | mariscos, gluten        | natydiaz | nataliapass
+Admin 		 | 19      | Lucas    | Sánchez  | lucas@example.com    | 1                     | zanahorias, pollo, cebolla, tomate   | nueces                  | lucas345 | lucaspass
+Admin    	 | 20      | Diego    | Ramirez | Diego@example.com    | 2                     | carne, pescado, cebolla, zanahorias  | mariscos, lactosa       | Ram12  | 123
    
