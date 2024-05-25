@@ -13,12 +13,9 @@ def guardar_datos(file_path, data):
 
 def mostrar_menu():
     print("\n--- Menú ---")
-    print("1. Modificar Experiencia.txt")
-    print("2. Modificar RecetasIngredientes.txt")
-    print("3. Modificar Usuarios.txt")
-    print("4. Modificar Ingredientes.txt")
-    print("5. Modificar Recetas.txt")
-    print("6. Salir")
+    print("1. Modificar Usuarios.txt")
+    print("2. Modificar Recetas.txt")
+    print("3. Salir")
 
 def modificar_archivo(file_path):
     datos = cargar_datos(file_path)
@@ -47,18 +44,15 @@ def modificar_archivo(file_path):
 
 def main():
     archivos = {
-        "1": "Experiencia.txt",
-        "2": "RecetasIngredientes.txt",
-        "3": "Usuarios.txt",
-        "4": "Ingredientes.txt",
-        "5": "Recetas.txt"
+        "1": "Usuarios.txt",
+        "2": "Recetas.txt"
     }
     
     while True:
         mostrar_menu()
         opcion = input("Seleccione una opción: ")
         
-        if opcion == '6':
+        if opcion == '3':
             break
         elif opcion in archivos:
             modificar_archivo(archivos[opcion])

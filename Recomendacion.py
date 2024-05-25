@@ -1,77 +1,57 @@
-def main():
-    import networkx as nx
+import pandas as pd
+import networkx as nx
 
-    # Crear un grafo dirigido para representar las relaciones
-    G = nx.DiGraph()
+def cargar_datos_usuarios(filepath):
+    usuarios_cols = ["tipo_usuario", "user_id", "nombre", "apellido", "correo", "experiencia_cocina_id", "alimentos_favoritos", "alergias", "usuario", "contraseña"]
+    usuarios = pd.read_csv(filepath, sep='|', header=0, names=usuarios_cols)
+    usuarios = usuarios.applymap(lambda x: x.strip() if isinstance(x, str) else x)
+    usuarios["user_id"] = pd.to_numeric(usuarios["user_id"], errors='coerce')
+    usuarios = usuarios.dropna(subset=["user_id"])
+    usuarios["user_id"] = usuarios["user_id"].astype(int)
+    return usuarios
 
-    # Agregar nodos de recetas
-    for _, row in recetas.iterrows():
-        G.add_node(row['receta_id'], name=row['nombre'], description=row['descripción'], difficulty=row['dificultad'], preparation_time=row['tiempo_preparación'], allergens=row['alergenos'], category=row['categoria'])
+def cargar_datos_recetas(filepath):
+    recetas_cols = ["receta_id", "nombre", "descripcion", "dificultad", "tiempo_preparacion", "alergenos", "categoria"]
+    recetas = pd.read_csv(filepath, sep='|', header=0, names=recetas_cols)
+    recetas = recetas.applymap(lambda x: x.strip() if isinstance(x, str) else x)
+    return recetas
 
-    # Agregar nodos de ingredientes
-    for _, row in ingredientes.iterrows():
-        G.add_node(row['ingrediente_id'], name=row['nombre'], type=row['tipo'])
+def construir_grafo_recetas(recetas):
+    G = nx.Graph()
+    for idx, receta in recetas.iterrows():
+        G.add_node(receta["receta_id"], descripcion=receta["descripcion"], dificultad=receta["dificultad"], alergenos=receta["alergenos"], categoria=receta["categoria"])
+    for i in range(len(recetas)):
+        for j in range(i + 1, len(recetas)):
+            if recetas.iloc[i]["dificultad"] == recetas.iloc[j]["dificultad"]:
+                G.add_edge(recetas.iloc[i]["receta_id"], recetas.iloc[j]["receta_id"])
+    return G
 
-    # Agregar aristas entre recetas e ingredientes
-    for _, row in recetas_ingredientes.iterrows():
-        G.add_edge(row['receta_id'], row['ingrediente_id'])
+def recomendar_recetas(user_id, usuarios, G):
+    if user_id not in usuarios["user_id"].values:
+        print(f"El usuario con user_id {user_id} no existe.")
+        return []
 
-    # Función para recomendar recetas a un usuario
-    def recommend_recetas(user_id):
-        recommended_recetas = []
-        for receta_id in G.neighbors(user_id):
-            for neighbor_receta_id in G.neighbors(receta_id):
-                if neighbor_receta_id not in recommended_recetas:
-                    recommended_recetas.append(neighbor_receta_id)
-        return recommended_recetas
+    user = usuarios[usuarios["user_id"] == user_id].iloc[0]
+    experiencia = user["experiencia_cocina_id"]
+    favoritos = set(user["alimentos_favoritos"].split(", "))
+    alergias = set(user["alergias"].split(", "))
 
-    # Funciones para las opciones del menú
-    def mostrar_recomendaciones_generales(user_id):
-        print("Recomendaciones generales para el usuario {}:".format(user_id))
-        recommended_recetas = recommend_recetas(user_id)
-        for receta_id in recommended_recetas:
-            print("- Receta ID {}: {}".format(receta_id, G.nodes[receta_id]['name']))
+    recomendaciones = []
 
-    def mostrar_desayuno(user_id):
-        print("Opciones de desayuno para el usuario {}:".format(user_id))
-        # Implementa la lógica para mostrar opciones de desayuno
+    for receta_id, data in G.nodes(data=True):
+        receta_dificultad = data["dificultad"]
+        receta_alergenos = set(data["alergenos"].split(", "))
 
-    def mostrar_almuerzo(user_id):
-        print("Opciones de almuerzo para el usuario {}:".format(user_id))
-        # Implementa la lógica para mostrar opciones de almuerzo
+        if receta_dificultad == experiencia and not receta_alergenos.intersection(alergias):
+            recomendaciones.append((receta_id, data["descripcion"]))
 
-    def mostrar_cena(user_id):
-        print("Opciones de cena para el usuario {}:".format(user_id))
-        # Implementa la lógica para mostrar opciones de cena
+    return recomendaciones
 
-    def editar_informacion(user_id):
-        print("Editar información para el usuario {}:".format(user_id))
-        # Implementa la lógica para editar información del usuario
+def main(user_id):
+    usuarios = cargar_datos_usuarios('Usuarios.txt')
+    recetas = cargar_datos_recetas('Recetas.txt')
+    G = construir_grafo_recetas(recetas)
+    recomendaciones = recomendar_recetas(user_id, usuarios, G)
+    for rec in recomendaciones:
+        print(f"Receta ID: {rec[0]}, Descripción: {rec[1]}")
 
-    # Ejemplo de uso
-    user_id = 1
-    while True:
-        print("\nMenú:")
-        print("1. Recomendaciones generales")
-        print("2. Desayuno")
-        print("3. Almuerzo")
-        print("4. Cena")
-        print("5. Editar información")
-        print("6. Cerrar sesión")
-        opcion = input("Seleccione una opción: ")
-
-        if opcion == "1":
-            mostrar_recomendaciones_generales(user_id)
-        elif opcion == "2":
-            mostrar_desayuno(user_id)
-        elif opcion == "3":
-            mostrar_almuerzo(user_id)
-        elif opcion == "4":
-            mostrar_cena(user_id)
-        elif opcion == "5":
-            editar_informacion(user_id)
-        elif opcion == "6":
-            print("Sesión cerrada. ¡Hasta luego!")
-            break
-        else:
-            print("Opción inválida. Inténtelo de nuevo.")
